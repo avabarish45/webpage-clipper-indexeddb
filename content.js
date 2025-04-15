@@ -21,7 +21,9 @@ function clipCurrentPage() {
     title: document.title,
     url: window.location.href,
     timestamp: new Date().toISOString(),
-    content: extractTextContent(document)
+    content: extractTextContent(document),
+    wordCount: extractTextContent(document).length,
+    readingTime: (extractTextContent(document).length / 150)
   };
   
   // Send the data to the background script

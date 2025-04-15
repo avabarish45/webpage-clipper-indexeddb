@@ -26,6 +26,8 @@ async function initDB() {
       // Define indexes for faster queries
       store.createIndex('url', 'url', { unique: false });
       store.createIndex('timestamp', 'timestamp', { unique: false });
+      store.createIndex('wordCount', 'wordCount', { unique: false });
+      store.createIndex('readingTime', 'readingTime', { unique: false });
       
       console.log('Database schema created');
     }
